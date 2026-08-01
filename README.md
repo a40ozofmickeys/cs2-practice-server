@@ -50,3 +50,11 @@ server behavior on those maps.
 
 CleanerCS2 is intentionally not configured here. It can remain installed to
 reduce excess console output; this repository does not replace or modify it.
+
+## Documentation
+
+- [VS Code and Git setup](docs/vscode-and-git.md)
+- [AMP server deployment](docs/server-setup.md)
+
+The repository contains VS Code extension recommendations and EditorConfig
+settings. Credentials and AMP-protected values are intentionally excluded.
