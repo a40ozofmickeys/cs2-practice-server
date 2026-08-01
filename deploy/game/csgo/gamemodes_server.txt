@@ -43,6 +43,7 @@
                 "workshop/3318295422/prefire_nuke"     ""
                 "workshop/3328383138/prefire_overpass" ""
                 "workshop/3562576256/prefire_train"    ""
+                "workshop/3767384672/antipeek_spray"    ""
             }
         }
 
