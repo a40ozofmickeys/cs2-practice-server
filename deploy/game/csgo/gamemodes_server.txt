@@ -52,7 +52,7 @@
             "displayname" "1v1"
             "maps"
             {
-                "workshop/3070253400/aim_redline_fp" ""
+                "workshop/3080419073/awp1v1" ""
             }
         }
     }
