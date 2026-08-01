@@ -1,0 +1,59 @@
+// Minimal CS2 practice-server map groups.
+// Values here override the stock gamemodes.txt definitions.
+
+"GameModes_Server.txt"
+{
+    "gameTypes"
+    {
+        "classic"
+        {
+            "gameModes"
+            {
+                "casual"
+                {
+                    "maxplayers" "64"
+                    "exec"
+                    {
+                        "exec" "gamemode_casual_last.cfg"
+                    }
+                    "mapgroupsMP"
+                    {
+                        "mg_prefire" "50"
+                        "mg_1v1"     "51"
+                    }
+                }
+            }
+        }
+    }
+
+    "mapgroups"
+    {
+        "mg_prefire"
+        {
+            "name"        "mg_prefire"
+            "displayname" "Prefire Training Maps"
+            "maps"
+            {
+                "workshop/3267302800/prefire_mirage"   ""
+                "workshop/3274138705/prefire_vertigo"  ""
+                "workshop/3282067356/prefire_ancient"  ""
+                "workshop/3289507717/prefire_inferno"  ""
+                "workshop/3295650711/prefire_dust2"    ""
+                "workshop/3307639951/prefire_anubis"   ""
+                "workshop/3318295422/prefire_nuke"     ""
+                "workshop/3328383138/prefire_overpass" ""
+                "workshop/3562576256/prefire_train"    ""
+            }
+        }
+
+        "mg_1v1"
+        {
+            "name"        "mg_1v1"
+            "displayname" "1v1"
+            "maps"
+            {
+                "workshop/3070253400/aim_redline_fp" ""
+            }
+        }
+    }
+}

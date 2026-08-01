@@ -1,0 +1,70 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	config = "ai/azy/config.kv3"
+	root = 
+	{
+		type = "decorator_token_service"
+		domain = "'StratTokens'"
+		output_token_name = "GroupId"
+		output_token_domain = "GroupMemberId"
+		config =
+		{
+			tokens =
+			[
+				"ai",
+			]
+			assignments =
+			[
+				[ 10000 ],
+			]
+		}
+		child =
+		{
+			type = "decorator_bot_service"
+			memory_to_expire =
+			[
+				{
+					key = "Player_LOS"
+					time = 0.90
+					distance = 0
+				},
+			]
+			child =
+			{
+				type = "decorator_repeat"
+				child =
+				{
+					type = "parallel"
+					children =
+					[
+						{	
+							type = "subtree"
+							file = "ai/azy//helpers/look-at-player-check-los.kv3"
+							name = "look-at-player-check-los"
+						},
+						{
+							type = "subtree"
+							file = "ai/azy//helpers/attack-player-if-visible.kv3"
+							name = "attack-visible-player"
+							params =
+							[
+								{
+									key = "EASY"
+									value = "2.0"
+								},
+								{
+									key = "MEDIUM"
+									value = "1.5"
+								},
+								{
+									key = "HARD"
+									value = "1.0"
+								},
+							]
+						}
+					]
+				}	
+			}
+		}
+	}
+}

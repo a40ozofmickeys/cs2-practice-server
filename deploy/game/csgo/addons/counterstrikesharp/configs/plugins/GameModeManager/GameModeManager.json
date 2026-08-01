@@ -1,0 +1,110 @@
+{
+  "Version": 12,
+  "RTV": {
+    "Enabled": true,
+    "PerMap": false,
+    "HideHud": false,
+    "MinRounds": 1,
+    "MinPlayers": 3,
+    "VoteDuration": 60,
+    "OptionsToShow": 6,
+    "VotePercentage": 51,
+    "OptionsInCoolDown": 3,
+    "EndOfMapVote": true,
+    "IncludeModes": true,
+    "IncludeExtend": false,
+    "MaxExtends": 5,
+    "ExtendTime": 15,
+    "ExtendRounds": 5,
+    "ModePercentage": 40,
+    "EnabledInWarmup": false,
+    "HideHudAfterVote": false,
+    "NominationEnabled": true,
+    "MaxNominationWinners": 1,
+    "ChangeImmediately": false,
+    "TriggerKillsBeforeEnd": 13,
+    "TriggerRoundsBeforeEnd": 2,
+    "TriggerSecondsBeforeEnd": 120
+  },
+  "Maps": {
+    "Mode": 0,
+    "Delay": 5,
+    "Default": "mg_prefire"
+  },
+  "Votes": {
+    "Enabled": false,
+    "Maps": false,
+    "GameModes": false,
+    "GameSettings": false
+  },
+  "Settings": {
+    "Enabled": true,
+    "Folder": "settings"
+  },
+  "Warmup": {
+    "Enabled": false,
+    "Time": 60,
+    "PerMap": true,
+    "Default": {
+      "Name": "Deathmatch",
+      "Config": "warmup/dm.cfg"
+    },
+    "List": [
+      {
+        "Name": "Deathmatch",
+        "Config": "warmup/dm.cfg"
+      }
+    ]
+  },
+  "Commands": {
+    "Map": true,
+    "Maps": true,
+    "Mode": true,
+    "Modes": true,
+    "TimeLeft": true,
+    "TimeLimit": true
+  },
+  "Rotation": {
+    "Enabled": true,
+    "Cycle": 0,
+    "MapGroups": [
+      "mg_prefire",
+      "mg_1v1"
+    ],
+    "WhenServerEmpty": false,
+    "CustomTimeLimit": 600,
+    "ModeRotation": true,
+    "ModeInterval": 1,
+    "ModeSchedules": false,
+    "Schedule": []
+  },
+  "GameModes": {
+    "Default": {
+      "Name": "Prefire",
+      "Config": "prefire.cfg",
+      "DefaultMap": "3289507717",
+      "MapGroups": [
+        "mg_prefire"
+      ]
+    },
+    "MapGroupFile": "gamemodes_server.txt",
+    "List": [
+      {
+        "Name": "Prefire",
+        "Config": "prefire.cfg",
+        "DefaultMap": "3289507717",
+        "MapGroups": [
+          "mg_prefire"
+        ]
+      },
+      {
+        "Name": "1v1",
+        "Config": "1v1.cfg",
+        "DefaultMap": "3070253400",
+        "MapGroups": [
+          "mg_1v1"
+        ]
+      }
+    ]
+  }
+}

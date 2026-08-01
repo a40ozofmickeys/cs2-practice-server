@@ -1,0 +1,58 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	type = "decorator_repeat"
+	child =
+	{
+		type = "condition_is_equal"
+		source = "NumberOfAliveTerrorists"
+		destination = 1
+		child =
+		{
+			type = "decorator_sensor"
+			shape =
+			{
+				type = "sensor_shape_sphere"
+				radius = 20000
+			}
+			entity_type_filter = "HUMAN_PLAYERS"
+			output = "Player_Origin"
+			orphan_only = 1
+			priority = 1
+			child =	
+			{
+				type = "decorator_repeat"
+				child =
+				{
+					type = "parallel"
+					children =
+					[
+						{
+							type = "decorator_repeat"
+							child =
+							{
+								type = "action_look_at"
+								input_location = "Player_Origin"
+							}
+						},
+						{
+							type = "decorator_repeat"
+							child =
+							{
+								type = "decorator_picker_visible"
+								input = "Player_Origin"
+								output = "Visible_Player"
+								check_fov = 0
+								child = 
+								{
+									type = "decorator_memory"
+									input = "Visible_Player"
+									output = "Player_LOS"
+								}
+							}
+						}
+					]
+				}
+			}
+		}
+	}
+}
